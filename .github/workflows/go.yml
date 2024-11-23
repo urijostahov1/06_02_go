@@ -10,12 +10,12 @@ on:
       - main
 jobs:
   build:
-    runs-on: ubuntu-20.01
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Build
-        run: go build -v ./...
+        run: go build -o dummy-server.bin ./cmd
       - name: Simple Test
         run: |
           ./dummy-server.bin &
