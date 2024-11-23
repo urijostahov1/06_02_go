@@ -5,15 +5,13 @@ name: Go
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+    branches:
+      - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-20.01
     steps:
-    - uses: actions/checkout@v4
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
