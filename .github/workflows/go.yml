@@ -10,17 +10,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
     runs-on: ubuntu-20.01
     steps:
     - uses: actions/checkout@v4
-
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
         go-version: '1.23.x'
-
     - name: Build
       run: go build -v ./...
     - name: Simple Test
